@@ -1,0 +1,23 @@
+@import "lib/functions";
+@import "lib/variables";
+
+$fa-font: "Font Awesome 6 Free";
+
+@mixin fa-replace-glyphicon($glyphicon, $fa-var, $weight: 900, $size: false) {
+    &.glyphicon-#{$glyphicon}::before {
+        @include fa-include($fa-var, $weight, $size);
+    }
+}
+
+@mixin fa-include-icon($fa-var, $weight: 900, $size: false) {
+    @include fa-include($fa-var, $weight, $size);
+}
+
+@mixin fa-include($fa-var, $weight: 900, $size: false) {
+    content: fa-content($fa-var);
+    font-family: $fa-font;
+    font-weight: $weight;
+    @if $size {
+        font-size: $size;
+    }
+}

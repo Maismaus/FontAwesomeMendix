@@ -1,0 +1,5 @@
+@import "../../fontawesome/web/fontawesome.scss";
+
+.glyphicon {
+    @include fa-replace-glyphicon("glass", $fa-var-glass-martini-alt);
+}
