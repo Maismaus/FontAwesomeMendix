@@ -32109,6 +32109,16 @@ readers do not read off random characters that represent icons */
   content: "";
 }
 
+.glyphicon.glyphicon-plus::before {
+  content: "\+";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.glyphicon.glyphicon-pencil::before {
+  content: "";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
 .glyphicon.glyphicon-glass::before {
   content: "";
   font-family: "Font Awesome 6 Free";
