@@ -1,7 +1,6 @@
 @import "lib/functions";
 @import "lib/variables";
-
-$fa-font: "Font Awesome 6 Free";
+@import "overrides";
 
 @mixin fa-replace-glyphicon($glyphicon, $fa-var, $weight: 900, $size: false) {
     &.glyphicon-#{$glyphicon}::before {
@@ -15,7 +14,7 @@ $fa-font: "Font Awesome 6 Free";
 
 @mixin fa-include($fa-var, $weight: 900, $size: false) {
     content: fa-content($fa-var);
-    font-family: $fa-font;
+    font-family: $fa-style-family;
     font-weight: $weight;
     @if $size {
         font-size: $size;

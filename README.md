@@ -5,22 +5,35 @@ Font Awesome module for use in Mendix projects
 
 Add the module to your project through the Mendix Marketplace. 
 
-## Using FontAwesome classes
+For advanced options, import the fontawesome stylesheet into your custom stylesheets:
 
-You can now use FontAwesome classes to add icons to containers.
-
-#### Example
-
-Add classes `fas` and `fa-plus` to an empty Mendix container. You should see the plus icon appear when you run the project. 
-
-## Overriding glyphicons
-
-If you prefer, you can overwrite glyphicons with FontAwesome icons. This requires a configuration each time you want to overwrite a specific icon. 
-
-Import the functions by adding the following scss to your stylesheets
 ```
 @import "../../fontawesome/web/fontawesome.scss";
 ```
+
+## Using FontAwesome classes
+
+Once you import the module, you can use FontAwesome classes to add icons to containers.
+
+##### Example
+
+Add classes `fas` and `fa-plus` to an empty Mendix container. You should see the plus icon appear when you run the project. 
+
+# Advanced options
+
+If you have imported the FontAwesome stylesheet as described above, you can use the advanced options.
+
+## Using FontAwesome on buttons
+
+The FontAwesome stylesheets by default overrides some styling on buttons allowing you to add FontAwesome classes to buttons. If FontAwesome is interfering with your existing styling rules, exclude this behavior by configuring the following variable before importing the stylesheet:
+
+```
+$override-core: false;
+```
+
+## Overriding glyphicons
+
+You can overwrite glyphicons with FontAwesome icons. This requires a configuration each time you want to overwrite a specific icon. 
 
 Overwrite glyphicons by calling the fa-replace-glyphicon mixin
 

@@ -3,7 +3,5 @@
 .glyphicon {
     @include fa-replace-glyphicon("plus", $fa-var-plus);
     @include fa-replace-glyphicon("pencil", $fa-var-pencil);
-
-    
     @include fa-replace-glyphicon("glass", $fa-var-glass-martini-alt);
 }
