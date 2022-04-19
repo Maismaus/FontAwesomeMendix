@@ -5,12 +5,6 @@ Font Awesome module for use in Mendix projects
 
 Add the module to your project through the Mendix Marketplace. 
 
-For advanced options, import the fontawesome stylesheet into your custom stylesheets:
-
-```
-@import "../../fontawesome/web/fontawesome.scss";
-```
-
 ## Using FontAwesome classes
 
 Once you import the module, you can use FontAwesome classes to add icons to containers.
@@ -21,11 +15,19 @@ Add classes `fas` and `fa-plus` to an empty Mendix container. You should see the
 
 # Advanced options
 
+For advanced options, import the fontawesome stylesheet into your custom stylesheets:
+
+```
+@import "../../fontawesome/web/fontawesome.scss";
+```
+
 If you have imported the FontAwesome stylesheet as described above, you can use the advanced options.
 
 ## Using FontAwesome on buttons
 
-The FontAwesome stylesheets by default overrides some styling on buttons allowing you to add FontAwesome classes to buttons. If FontAwesome is interfering with your existing styling rules, exclude this behavior by configuring the following variable before importing the stylesheet:
+The FontAwesome stylesheets by default overrides some styling on buttons allowing you to add FontAwesome classes to buttons. Simply add classes such as `fas fa-house` and the icon should automatically appear on a button.
+
+If FontAwesome is interfering with your existing styling rules, exclude this behavior by configuring the following variable before importing the stylesheet:
 
 ```
 $override-core: false;
